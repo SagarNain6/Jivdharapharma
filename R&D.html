@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jivdhara - Innovative Healthcare Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
+      
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                 <span>Jivdhara</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                  
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="R&D.html">R&D</a></li>
+                  
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content animate fade-in">
+            <h1>Research & Development</h1>
+            <p>Dedicated to improving global health through groundbreaking research, high-quality medicines, and affordable healthcare solutions.</p>
+           
+        </div>
+    </section>
+
+   
+    
+
+    
+
+    <!-- R&D Section -->
+    <section class="section" id="rnd" style="background-color: #f5f7fa;">
+        <div class="container">
+            <div class="section-title animate fade-in delay-1">
+                <h2>Research & Development</h2>
+                <p>Our commitment to innovation drives the discovery of novel therapeutics to address unmet medical needs.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image animate slide-in-left delay-2">
+                    <img src="photos/Research.png" alt="Scientists conducting pharmaceutical research in high-tech laboratory setting" />
+                </div>
+                <div class="about-text animate slide-in-right delay-2">
+                    <h3>Innovating for Tomorrow's Health</h3>
+                    <p>At Jivdhara, we invest significantly in R&D to discover and develop innovative medicines. Our research spans multiple areas including oncology, cardiology, anti-allergy, and infectious diseases.</p>
+                    <p>Our global team of scientists and researchers work tirelessly to translate scientific discoveries into medicines that improve patients' lives. We collaborate with academic institutions, biotech companies, and healthcare providers worldwide.</p>
+                  
+                    </ul>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="dashboard">
+            <div class="dashboard-controls">
+                <div class="search-box">
+                    <i>🔍</i>
+                    <input type="text" id="searchInput" placeholder="Search projects...">
+                </div>
+                
+            </div>
+
+            <div class="loading">
+                <div>Loading data...</div>
+            </div>
+
+            <div class="table-responsive">
+                <table id="rdTable">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Therapeutic Category</th>
+                            <th>Disease Indication</th>
+                            <th>Product</th>
+                            <th>Strength</th>
+                            <th>Dosage Form</th>
+                            <th>Innovator Company</th>
+                            <th>Innovator Brand</th>
+                            <th>Detailed Contents</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Table content will be populated via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button id="prevPage">Previous</button>
+                <span id="pageInfo">Page 1 of 5</span>
+                <button id="nextPage">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Details Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Details</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div id="modalContent">
+                <p>Loading project details...</p>
+            </div>
+        </div>
+    </div>
+  
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title animate fade-in delay-1">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you. Get in touch with our team for any inquiries or partnerships.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info animate slide-in-left delay-2">
+                    <h3>Corporate Headquarters</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <h4>Address</h4>
+                            <p>504, Shiv Angan Complex, Sallaiya, 
+     Bhopal Madhya Pradesh, 
+     India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+918871000001">+91 8871000001</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p><a href="office@jivdhara.in">office@jivdhara.in</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-text">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 5:00 PM IST</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content animate fade-in delay-1">
+                <div class="footer-column">
+                    <h3>Jivdhara Pharma</h3>
+                    <p>Innovating for a healthier world. Committed to discovering, developing, and delivering innovative medicines that make a difference.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        
+                        <li><a href="Products.html">Products</a></li>
+                        <li><a href="R&D.html">Research</a></li>
+                       
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+               
+                
+           
+            <div class="copyright animate fade-in delay-2">
+                <p>&copy; 2021 Jivdhara Pharmaceuticals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                this.innerHTML = navLinks.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+
+            // Smooth Scrolling for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if(navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Header Scroll Effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', function() {
+                if(window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Intersection Observer for Animations
+            const animateElements = document.querySelectorAll('.animate');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add(entry.target.dataset.animation);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animateElements.forEach(element => {
+                const animationType = Array.from(element.classList)
+                    .find(cls => cls.startsWith('slide-in') || cls === 'fade-in');
+                
+                if(animationType) {
+                    element.dataset.animation = animationType;
+                    observer.observe(element);
+                }
+            });
+
+            // Product Card Hover Animation
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Contact Form Submission
+            const contactForm = document.getElementById('contactForm');
+            if(contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will get back to you soon.');
+                    this.reset();
+                });
+            }
+
+            // Scroll to top button
+            const scrollToTopBtn = document.createElement('button');
+            scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            scrollToTopBtn.className = 'scroll-to-top';
+            scrollToTopBtn.style.display = 'none';
+            scrollToTopBtn.style.position = 'fixed';
+            scrollToTopBtn.style.bottom = '30px';
+            scrollToTopBtn.style.right = '30px';
+            scrollToTopBtn.style.width = '50px';
+            scrollToTopBtn.style.height = '50px';
+            scrollToTopBtn.style.borderRadius = '50%';
+            scrollToTopBtn.style.backgroundColor = 'var(--primary)';
+            scrollToTopBtn.style.color = 'white';
+            scrollToTopBtn.style.border = 'none';
+            scrollToTopBtn.style.cursor = 'pointer';
+            scrollToTopBtn.style.transition = 'all 0.3s ease';
+            scrollToTopBtn.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            scrollToTopBtn.style.fontSize = '1.2rem';
+            scrollToTopBtn.style.zIndex = '999';
+            
+            scrollToTopBtn.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'var(--secondary)';
+                this.style.transform = 'scale(1.1)';
+            });
+            
+            scrollToTopBtn.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'var(--primary)';
+                this.style.transform = 'scale(1)';
+            });
+            
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            document.body.appendChild(scrollToTopBtn);
+            
+            window.addEventListener('scroll', function() {
+                if(window.scrollY > 300) {
+                    scrollToTopBtn.style.display = 'flex';
+                    scrollToTopBtn.style.justifyContent = 'center';
+                    scrollToTopBtn.style.alignItems = 'center';
+                } else {
+                    scrollToTopBtn.style.display = 'none';
+                }
+            });
+        });
+        // Sample R&D data (50 projects)
+        
+        const departments = ['Biotech', 'AI & ML', 'Clean Energy', 'Advanced Materials'];
+        const statuses = ['planning', 'active', 'completed', 'hold'];
+        const firstNames = ['Alex', 'Jamie', 'Taylor', 'Morgan', 'Jordan', 'Casey', 'Riley', 'Quinn', 'Peyton', 'Dakota'];
+        const lastNames = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Miller', 'Davis', 'Garcia', 'Wilson', 'Anderson'];
+        const milestones = [
+            'Concept Approved',
+            'Prototype Development',
+            'Phase 1 Testing',
+            'Regulatory Review',
+            'Market Analysis',
+            'Patent Filed',
+            'Commercialization Plan',
+            'Phase 2 Testing',
+            'Pilot Production',
+            'Final Review'
+        ];
+
+   
+       const rdProjects = [
+  {
+    id: 1,
+    therapeuticCategory: "Anticoagulant (Factor Xa Inhibitor)",
+    diseaseIndication: "Stroke prevention in non-valvular atrial fibrillation, treatment/prevention of DVT/PE",
+    product: "Apixaban",
+    strength: "2.5 mg, 5 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Bristol Myers Squibb/Pfizer",
+    innovatorBrand: "Eliquis",
+    detailedContents: "Oral, direct factor Xa inhibitor, no antidote required, generic versions launched in 2025"
+  },
+  {
+    id: 2,
+    therapeuticCategory: "Antiplatelet (P2Y12 Inhibitor)",
+    diseaseIndication: "Acute coronary syndrome, prevention of thrombotic events",
+    product: "Ticagrelor",
+    strength: "60 mg, 90 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "AstraZeneca",
+    innovatorBrand: "Brilinta/Brilique",
+    detailedContents: "Oral, reversible P2Y12 inhibitor, rapid onset, generic competition in 2025"
+  },
+  {
+    id: 3,
+    therapeuticCategory: "SGLT2 Inhibitor",
+    diseaseIndication: "Type 2 diabetes, heart failure, CKD",
+    product: "Empagliflozin",
+    strength: "10 mg, 25 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Boehringer Ingelheim/Eli Lilly",
+    innovatorBrand: "Jardiance",
+    detailedContents: "Oral, SGLT2 inhibitor, reduces glucose reabsorption, CV/renal benefits"
+  },
+  {
+    id: 4,
+    therapeuticCategory: "SGLT2 Inhibitor",
+    diseaseIndication: "Type 2 diabetes, heart failure, CKD",
+    product: "Dapagliflozin",
+    strength: "5 mg, 10 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "AstraZeneca",
+    innovatorBrand: "Farxiga/Forxiga",
+    detailedContents: "Oral, SGLT2 inhibitor, pediatric approval 2024, CV/renal benefits"
+  },
+  {
+    id: 5,
+    therapeuticCategory: "SGLT2 Inhibitor",
+    diseaseIndication: "Type 2 diabetes, diabetic nephropathy",
+    product: "Canagliflozin",
+    strength: "100 mg, 300 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Janssen (J&J)",
+    innovatorBrand: "Invokana",
+    detailedContents: "Oral, SGLT2 inhibitor, reduces renal progression in diabetes"
+  },
+  {
+    id: 6,
+    therapeuticCategory: "GLP-1/GIP Agonist",
+    diseaseIndication: "Type 2 diabetes, obesity, obstructive sleep apnea",
+    product: "Tirzepatide",
+    strength: "2.5 mg to 15 mg",
+    dosageForm: "Injection (SC)",
+    innovatorCompany: "Eli Lilly",
+    innovatorBrand: "Mounjaro (diabetes), Zepbound (obesity)",
+    detailedContents: "Weekly SC injection, dual GIP/GLP-1 agonist, superior A1C/weight loss vs GLP-1 alone"
+  },
+  {
+    id: 7,
+    therapeuticCategory: "GLP-1 Agonist",
+    diseaseIndication: "Type 2 diabetes, obesity, CV risk reduction, MASH",
+    product: "Semaglutide",
+    strength: "0.25 mg to 2.4 mg (SC), 3 mg to 14 mg (oral)",
+    dosageForm: "Injection (LA), Tablet",
+    innovatorCompany: "Novo Nordisk",
+    innovatorBrand: "Ozempic (SC), Wegovy (SC), Rybelsus (oral)",
+    detailedContents: "Weekly SC injection or daily oral, GLP-1 agonist, CV and liver benefits"
+  },
+  {
+    id: 8,
+    therapeuticCategory: "SGLT2 Inhibitor + Biguanide",
+    diseaseIndication: "Type 2 diabetes",
+    product: "Empagliflozin/Metformin",
+    strength: "5 mg/500 mg, 12.5 mg/1000 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Boehringer Ingelheim/Eli Lilly",
+    innovatorBrand: "Synjardy",
+    detailedContents: "Oral, combines SGLT2 inhibition and metformin for glycemic control"
+  },
+  {
+    id: 9,
+    therapeuticCategory: "SGLT2 Inhibitor + DPP4 Inhibitor",
+    diseaseIndication: "Type 2 diabetes",
+    product: "Empagliflozin/Linagliptin",
+    strength: "10 mg/5 mg, 25 mg/5 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Boehringer Ingelheim/Eli Lilly",
+    innovatorBrand: "Glyxambi",
+    detailedContents: "Oral, dual mechanism for glucose lowering, SGLT2 and DPP4 inhibition"
+  },
+  {
+    id: 10,
+    therapeuticCategory: "SGLT2/DPP4/Biguanide",
+    diseaseIndication: "Type 2 diabetes",
+    product: "Empagliflozin/Metformin/Linagliptin",
+    strength: "10 mg/500 mg/5 mg, 25 mg/1000 mg/5 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Boehringer Ingelheim/Eli Lilly",
+    innovatorBrand: "Trijardy XR",
+    detailedContents: "Oral, triple therapy for enhanced glycemic control in complex cases"
+  },
+  {
+    id: 11,
+    therapeuticCategory: "GLP-1/Amylin Agonist",
+    diseaseIndication: "Type 2 diabetes, obesity",
+    product: "Cagrilintide/Semaglutide",
+    strength: "TBD (Phase III)",
+    dosageForm: "Injection (SC)",
+    innovatorCompany: "Novo Nordisk",
+    innovatorBrand: "CagriSema",
+    detailedContents: "Weekly SC injection, dual GLP-1/amylin agonist, superior weight loss vs semaglutide"
+  },
+  {
+    id: 12,
+    therapeuticCategory: "GLP-1/Glucagon Agonist",
+    diseaseIndication: "Type 2 diabetes, obesity",
+    product: "Mazdutide",
+    strength: "TBD (Phase III)",
+    dosageForm: "Injection (SC)",
+    innovatorCompany: "Innovent Biologics",
+    innovatorBrand: "Mazdutide",
+    detailedContents: "Weekly SC injection, dual GLP-1/glucagon agonist, targets liver fat reduction"
+  },
+  {
+    id: 13,
+    therapeuticCategory: "Non-Steroidal MRA",
+    diseaseIndication: "CKD associated with type 2 diabetes",
+    product: "Finerenone",
+    strength: "10 mg, 20 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Bayer",
+    innovatorBrand: "Kerendia",
+    detailedContents: "Oral, non-steroidal MRA, reduces albuminuria and CV risk"
+  },
+  {
+    id: 14,
+    therapeuticCategory: "MRA + SGLT2 Inhibitor",
+    diseaseIndication: "CKD, type 2 diabetes",
+    product: "Finerenone/Empagliflozin",
+    strength: "TBD (Phase III)",
+    dosageForm: "Tablet",
+    innovatorCompany: "Bayer/Boehringer Ingelheim",
+    innovatorBrand: "None (in development)",
+    detailedContents: "Oral, combines MRA and SGLT2 for synergistic renal protection"
+  },
+  {
+    id: 15,
+    therapeuticCategory: "THR-β Agonist",
+    diseaseIndication: "MASH",
+    product: "Resmetirom",
+    strength: "80 mg, 100 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Madrigal Pharmaceuticals",
+    innovatorBrand: "Rezdiffra",
+    detailedContents: "Oral, THR-β agonist, reduces liver fat, first approved for MASH"
+  },
+  {
+    id: 16,
+    therapeuticCategory: "HIF-PH Inhibitor",
+    diseaseIndication: "Anemia in chronic kidney disease",
+    product: "Vadadustat",
+    strength: "150 mg, 300 mg, 450 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Akebia Therapeutics",
+    innovatorBrand: "Vafseo",
+    detailedContents: "Oral, HIF-PH inhibitor, stimulates erythropoiesis"
+  },
+  {
+    id: 17,
+    therapeuticCategory: "PCSK9 Inhibitor",
+    diseaseIndication: "Hypercholesterolemia, CV risk reduction",
+    product: "Lerodalcibep",
+    strength: "TBD (Phase III)",
+    dosageForm: "Injection (SC, LA)",
+    innovatorCompany: "LIB Therapeutics",
+    innovatorBrand: "Lerodalcibep",
+    detailedContents: "Monthly SC injection, PCSK9 inhibitor, reduces LDL-C"
+  },
+  {
+    id: 18,
+    therapeuticCategory: "Antisense Oligonucleotide",
+    diseaseIndication: "Lipoprotein(a)-driven CV disease",
+    product: "Pelacarsen",
+    strength: "TBD (Phase III)",
+    dosageForm: "Injection (SC, LA)",
+    innovatorCompany: "Ionis/Novartis",
+    innovatorBrand: "Pelacarsen",
+    detailedContents: "Monthly SC injection, targets LPA mRNA to reduce Lp(a) levels"
+  },
+  {
+    id: 19,
+    therapeuticCategory: "GLP-1 Agonist",
+    diseaseIndication: "Type 2 diabetes, obesity",
+    product: "Orforglipron",
+    strength: "TBD (Phase III)",
+    dosageForm: "Tablet",
+    innovatorCompany: "Eli Lilly",
+    innovatorBrand: "Orforglipron",
+    detailedContents: "Oral, non-peptide GLP-1 agonist, daily dosing, improves A1C and weight loss"
+  },
+  {
+    id: 20,
+    therapeuticCategory: "GLP-1/GIP/Glucagon Agonist",
+    diseaseIndication: "Type 2 diabetes, obesity",
+    product: "Retatrutide",
+    strength: "TBD (Phase III)",
+    dosageForm: "Injection (SC, LA)",
+    innovatorCompany: "Eli Lilly",
+    innovatorBrand: "Retatrutide",
+    detailedContents: "Weekly SC injection, triple agonist, superior weight loss vs tirzepatide"
+  },
+  {
+    id: 21,
+    therapeuticCategory: "siRNA Therapy",
+    diseaseIndication: "Hypercholesterolemia, CV risk reduction",
+    product: "Inclisiran",
+    strength: "284 mg/1.5 mL",
+    dosageForm: "Injection (SC, LA)",
+    innovatorCompany: "Novartis",
+    innovatorBrand: "Leqvio",
+    detailedContents: "SC injection every 6 months, siRNA targeting PCSK9, reduces LDL-C"
+  },
+  {
+    id: 22,
+    therapeuticCategory: "Endothelin Receptor Antagonist",
+    diseaseIndication: "Resistant hypertension",
+    product: "Aprocitentan",
+    strength: "12.5 mg, 25 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Idorsia/Janssen",
+    innovatorBrand: "Tryvio",
+    detailedContents: "Oral, dual ERA, first new hypertension mechanism in decades"
+  },
+  {
+    id: 23,
+    therapeuticCategory: "ANGPTL3 Inhibitor",
+    diseaseIndication: "HoFH",
+    product: "Evinacumab",
+    strength: "150 mg/mL",
+    dosageForm: "Injection (IV)",
+    innovatorCompany: "Regeneron",
+    innovatorBrand: "Evkeeza",
+    detailedContents: "IV infusion every 4 weeks, reduces LDL-C in HoFH"
+  },
+  {
+    id: 24,
+    therapeuticCategory: "Antisense Oligonucleotide (Hypertriglyceridemia)",
+    diseaseIndication: "Severe hypertriglyceridemia, FCS",
+    product: "Olezarsen",
+    strength: "TBD (Phase III)",
+    dosageForm: "Injection (SC)",
+    innovatorCompany: "Ionis Pharmaceuticals",
+    innovatorBrand: "Olezarsen",
+    detailedContents: "SC injection, monthly, targets APOC3 mRNA to reduce triglycerides"
+  },
+  {
+    id: 25,
+    therapeuticCategory: "FGF21 Analog",
+    diseaseIndication: "MASH",
+    product: "Efruxifermin",
+    strength: "TBD (Phase III)",
+    dosageForm: "Injection (SC, LA)",
+    innovatorCompany: "Akero Therapeutics",
+    innovatorBrand: "Efruxifermin",
+    detailedContents: "Weekly SC injection, FGF21 analog, reduces liver fat and fibrosis"
+  },
+  {
+    id: 26,
+    therapeuticCategory: "FGF21 Analog",
+    diseaseIndication: "MASH, severe hypertriglyceridemia",
+    product: "Pegozafermin",
+    strength: "TBD (Phase III)",
+    dosageForm: "Injection (SC, LA)",
+    innovatorCompany: "89bio",
+    innovatorBrand: "Pegozafermin",
+    detailedContents: "Weekly SC injection, FGF21 analog, targets liver fat and metabolic dysfunction"
+  },
+  {
+    id: 27,
+    therapeuticCategory: "RNAi Therapy",
+    diseaseIndication: "Hypertension",
+    product: "Zilebesiran",
+    strength: "TBD (Phase III)",
+    dosageForm: "Injection (SC, LA)",
+    innovatorCompany: "Alnylam/Roche",
+    innovatorBrand: "Zilebesiran+E13IA12:H31",
+    detailedContents: "SC injection every 6 months, RNAi targeting AGT, reduces blood pressure"
+  },
+ 
+  {
+    id: 28,
+    therapeuticCategory: "JAK Inhibitor (Autoimmune Diseases)",
+    diseaseIndication: "Rheumatoid arthritis, psoriatic arthritis, ulcerative colitis",
+    product: "Tofacitinib",
+    strength: "5 mg, 10 mg, 11 mg (XR)",
+    dosageForm: "Tablet, Extended-Release",
+    innovatorCompany: "Pfizer",
+    innovatorBrand: "Xeljanz/Xeljanz XR",
+    detailedContents: "Oral, selective JAK1/3 inhibitor, black box warning for CV events and malignancy"
+  },
+  {
+    id: 29,
+    therapeuticCategory: "IL-13 Inhibitor",
+    diseaseIndication: "Moderate-to-severe atopic dermatitis",
+    product: "Lebrikizumab",
+    strength: "250 mg",
+    dosageForm: "Injection (SC, LA)",
+    innovatorCompany: "Eli Lilly/Almirall",
+    innovatorBrand: "Ebglyss",
+    detailedContents: "Biweekly SC injection, targets IL-13 to reduce type 2 inflammation"
+  },
+  {
+    id: 30,
+    therapeuticCategory: "C5a Receptor Antagonist",
+    diseaseIndication: "ANCA-associated vasculitis",
+    product: "Avacopan",
+    strength: "10 mg",
+    dosageForm: "Capsule",
+    innovatorCompany: "ChemoCentryx/Amgen",
+    innovatorBrand: "Tavneos",
+    detailedContents: "Oral, C5a inhibitor, reduces inflammation in vasculitis"
+  },
+  {
+    id: 31,
+    therapeuticCategory: "Antisense Oligonucleotide",
+    diseaseIndication: "Hereditary angioedema (HAE) prophylaxis",
+    product: "Donidalorsen",
+    strength: "TBD (Phase III)",
+    dosageForm: "Injection (SC, LA)",
+    innovatorCompany: "Ionis Pharmaceuticals",
+    innovatorBrand: "Donidalorsen",
+    detailedContents: "Monthly SC injection, reduces prekallikrein, 62% reduction in HAE attack rates"
+  },
+  {
+    id: 32,
+    therapeuticCategory: "Plasma Kallikrein Inhibitor",
+    diseaseIndication: "On-demand treatment of HAE attacks",
+    product: "Sebetralstat",
+    strength: "TBD (Phase III)",
+    dosageForm: "Tablet",
+    innovatorCompany: "KalVista Pharmaceuticals",
+    innovatorBrand: "Ekterly",
+    detailedContents: "Oral, first oral on-demand HAE therapy, rapid symptom relief"
+  },
+ 
+    {
+        id: 33,
+        therapeuticCategory: "Anti-Amyloid Therapy",
+        diseaseIndication: "Early Alzheimer’s disease",
+        product: "Donanemab",
+        strength: "350 mg/20 mL",
+        dosageForm: "Injection (IV)",
+        innovatorCompany: "Eli Lilly",
+        innovatorBrand: "Kisunla",
+        detailedContents: "IV infusion every 4 weeks, targets amyloid-beta plaques to slow cognitive decline"
+    },
+    {
+        id: 34,
+        therapeuticCategory: "Muscarinic Agonist",
+        diseaseIndication: "Schizophrenia",
+        product: "Cobenfy (KarXT)",
+        strength: "50 mg/20 mg (xanomeline/trospium)",
+        dosageForm: "Capsule",
+        innovatorCompany: "Bristol Myers Squibb (via Karuna)",
+        innovatorBrand: "Cobenfy",
+        detailedContents: "Oral, muscarinic M1/M4 agonist, novel non-dopamine mechanism for psychosis"
+    },
+    {
+        id: 35,
+        therapeuticCategory: "Muscarinic Agonist",
+        diseaseIndication: "Schizophrenia",
+        product: "Xanomeline/Trospium (KarXT)",
+        strength: "50 mg/20 mg",
+        dosageForm: "Capsule",
+        innovatorCompany: "Bristol Myers Squibb (via Karuna)",
+        innovatorBrand: "Cobenfy",
+        detailedContents: "Oral, muscarinic M1/M4 agonist, novel non-dopamine mechanism for psychosis"
+    },
+    {
+        id: 36,
+        therapeuticCategory: "Nrf2 Activator",
+        diseaseIndication: "Friedreich’s ataxia",
+        product: "Omaveloxolone",
+        strength: "50 mg",
+        dosageForm: "Capsule",
+        innovatorCompany: "Reata Pharmaceuticals",
+        innovatorBrand: "Skyclarys",
+        detailedContents: "Oral, first approved therapy for Friedreich’s ataxia, activates Nrf2 pathway"
+    },
+    {
+        id: 37,
+        therapeuticCategory: "Antisense Oligonucleotide",
+        diseaseIndication: "SOD1-ALS",
+        product: "Tofersen",
+        strength: "100 mg/15 mL",
+        dosageForm: "Injection (Intrathecal, LA)",
+        innovatorCompany: "Biogen",
+        innovatorBrand: "Qalsody",
+        detailedContents: "Intrathecal injection every 4 weeks, targets SOD1 mRNA for ALS"
+    },
+    {
+        id: 38,
+        therapeuticCategory: "CGRP Receptor Antagonist",
+        diseaseIndication: "Migraine prevention",
+        product: "Atogepant",
+        strength: "10 mg, 30 mg, 60 mg",
+        dosageForm: "Tablet",
+        innovatorCompany: "AbbVie",
+        innovatorBrand: "Qulipta",
+        detailedContents: "Oral, small-molecule CGRP antagonist, daily dosing for migraine prophylaxis"
+    },
+    {
+        id: 39,
+        therapeuticCategory: "Mitochondrial Therapy",
+        diseaseIndication: "Primary mitochondrial myopathy, Barth syndrome",
+        product: "Elamipretide",
+        strength: "TBD (Phase III)",
+        dosageForm: "Injection (SC, LA)",
+        innovatorCompany: "Stealth BioTherapeutics",
+        innovatorBrand: "Elamipretide",
+        detailedContents: "Daily SC injection, targets mitochondrial dysfunction, stabilizes cardiolipin"
+    },
+    {
+        id: 40,
+        therapeuticCategory: "HIV Integrase Inhibitor",
+        diseaseIndication: "HIV-1 treatment, pre-exposure prophylaxis (PrEP)",
+        product: "Cabotegravir",
+        strength: "200 mg/mL (IM), 30 mg (oral)",
+        dosageForm: "Injection (LA), Tablet",
+        innovatorCompany: "ViiV Healthcare (GSK)",
+        innovatorBrand: "Apretude (inj), Vocabria (oral)",
+        detailedContents: "Long-acting IM injection every 2 months for PrEP, oral lead-in option"
+    },
+    {
+        id: 41,
+        therapeuticCategory: "HIV Integrase Inhibitor",
+        diseaseIndication: "HIV-1 treatment in adults and pediatrics",
+        product: "Dolutegravir",
+        strength: "50 mg",
+        dosageForm: "Tablet",
+        innovatorCompany: "ViiV Healthcare (GSK)",
+        innovatorBrand: "Tivicay",
+        detailedContents: "Oral, high barrier to resistance, used in combination regimens"
+    },
+    {
+        id: 42,
+        therapeuticCategory: "HIV Capsid Inhibitor",
+        diseaseIndication: "HIV-1 treatment, PrEP",
+        product: "Lenacapavir",
+        strength: "309 mg/mL (SC), 463.5 mg (oral)",
+        dosageForm: "Injection (SC, LA), Tablet",
+        innovatorCompany: "Gilead Sciences",
+        innovatorBrand: "Sunlenca (inj), Yeztugo (PrEP)",
+        detailedContents: "SC injection every 6 months, first long-acting capsid inhibitor for HIV"
+    },
+    
+  {
+    id: 43,
+    therapeuticCategory: "ALK Inhibitor",
+    diseaseIndication: "ALK-positive NSCLC",
+    product: "Ensartinib",
+    strength: "225 mg",
+    dosageForm: "Tablet",
+    innovatorCompany: "Xcovery/Betta Pharmaceuticals",
+    innovatorBrand: "Ensartinib",
+    detailedContents: "Oral, ALK inhibitor for targeted NSCLC therapy"
+  },
+  {
+    id: 44,
+    therapeuticCategory: "VEGF/FGFR Inhibitor",
+    diseaseIndication: "Advanced neuroendocrine tumors",
+    product: "Surufatinib",
+    strength: "250 mg",
+    dosageForm: "Capsule",
+    innovatorCompany: "Hutchmed",
+    innovatorBrand: "Sulanda",
+    detailedContents: "Oral, multi-kinase inhibitor targeting VEGF, FGFR, CSF-1R"
+  },
+  {
+    id: 45,
+    therapeuticCategory: "Antifibrotic (Tyrosine Kinase Inhibitor)",
+    diseaseIndication: "Idiopathic pulmonary fibrosis, progressive fibrosing ILD",
+    product: "Nintedanib",
+    strength: "100 mg, 150 mg",
+    dosageForm: "Capsule",
+    innovatorCompany: "Boehringer Ingelheim",
+    innovatorBrand: "Ofev",
+    detailedContents: "Oral, multi-kinase inhibitor targeting VEGF, FGF, PDGF receptors"
+  },
+  {
+    id: 46,
+    "therapeuticCategory": "PDE3/4 Inhibitor",
+    "diseaseIndication": "Chronic obstructive pulmonary disease (COPD)",
+    "product": "Ensifentrine",
+    "strength": "3 mg",
+    "dosageForm": "Inhalation (Nebulizer)",
+    "innovatorCompany": "Verona Pharma",
+    "innovatorBrand": "Ohtuvayre",
+    "detailedContents": "Twice-daily nebulized inhalation, dual PDE3/4 inhibitor for bronchodilation"
+  },
+  {
+    "id": 47,
+    "therapeuticCategory": "Potassium-Competitive Acid Blocker (GI)",
+    "diseaseIndication": "H. pylori infection, GERD, erosive esophagitis",
+    "product": "Vonoprazan",
+    "strength": "10 mg, 20 mg",
+    "dosageForm": "Tablet",
+    "innovatorCompany": "Phathom Pharmaceuticals",
+    "innovatorBrand": "Voquezna",
+    "detailedContents": "Oral, P-CAB, superior acid suppression vs PPIs, co-packaged with antibiotics"
+  },
+  {
+    "id": 48,
+    "therapeuticCategory": "siRNA Therapy",
+    "diseaseIndication": "Hemophilia A/B with or without inhibitors",
+    "product": "Fitusiran",
+    "strength": "TBD (Phase III)",
+    "dosageForm": "Injection (SC, LA)",
+    "innovatorCompany": "Sanofi/Alnylam",
+    "innovatorBrand": "Fitusiran",
+    "detailedContents": "Monthly SC injection, siRNA targeting AT3 to restore thrombin generation"
+  },
+  {
+    "id": 49,
+    "therapeuticCategory": "RNAi Therapy",
+    "diseaseIndication": "Primary hyperoxaluria type 1 (PH1)",
+    "product": "Nedosiran",
+    "strength": "160 mg/mL",
+    "dosageForm": "Injection (SC, LA)",
+    "innovatorCompany": "Dicerna/Novo Nordisk",
+    "innovatorBrand": "Rivfloza",
+    "detailedContents": "Monthly SC injection, RNAi targeting LDHA, reduces oxalate production"
+  }
+]
+
+
+
+
+
+
+
+
+      
+
+   
+
+    // DOM Elements
+    const tableBody = document.getElementById('tableBody');
+    const searchInput = document.getElementById('searchInput');
+
+    const prevPageBtn = document.getElementById('prevPage');
+    const nextPageBtn = document.getElementById('nextPage');
+    const pageInfo = document.getElementById('pageInfo');
+    const projectModal = document.getElementById('projectModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.getElementById('modalContent');
+
+    // Pagination
+    let currentPage = 1;
+    const rowsPerPage = 10;
+    let filteredProjects = [...rdProjects];
+
+    // Render table
+    function renderTable() {
+        tableBody.innerHTML = '';
+        const startIndex = (currentPage - 1) * rowsPerPage;
+        const endIndex = startIndex + rowsPerPage;
+        const paginatedProjects = filteredProjects.slice(startIndex, endIndex);
+
+        paginatedProjects.forEach(project => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${project.id}</td>
+                <td>${project.therapeuticCategory}</td>
+                <td>${project.diseaseIndication}</td>
+                <td>${project.product}</td>
+                <td>${project.strength}</td>
+                <td>${project.dosageForm}</td>
+                <td>${project.innovatorCompany}</td>
+                <td>${project.innovatorBrand}</td>
+                <td>${project.detailedContents}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+
+        updatePagination();
+    }
+
+    // Filter projects based on search
+    function filterProjects() {
+        const searchTerm = searchInput.value.toLowerCase();
+        filteredProjects = rdProjects.filter(project =>
+            project.therapeuticCategory.toLowerCase().includes(searchTerm) ||
+            project.diseaseIndication.toLowerCase().includes(searchTerm) ||
+            project.product.toLowerCase().includes(searchTerm) ||
+            project.innovatorCompany.toLowerCase().includes(searchTerm) ||
+            project.innovatorBrand.toLowerCase().includes(searchTerm) ||
+            project.detailedContents.toLowerCase().includes(searchTerm)
+        );
+        currentPage = 1;
+        renderTable();
+    }
+
+    // Update pagination info and button states
+    function updatePagination() {
+        const totalPages = Math.ceil(filteredProjects.length / rowsPerPage);
+        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+        prevPageBtn.disabled = currentPage === 1;
+        nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
+    }
+
+    // View project details in modal (not used in table, but kept for future)
+    function viewProjectDetails(e) {
+        const projectId = parseInt(e.target.getAttribute('data-id'));
+        const project = rdProjects.find(p => p.id === projectId);
+        if (project) {
+            modalTitle.textContent = `${project.product} - ${project.therapeuticCategory}`;
+            modalContent.innerHTML = `
+                <div class="project-details">
+                    <p><strong>ID:</strong> ${project.id}</p>
+                    <p><strong>Therapeutic Category:</strong> ${project.therapeuticCategory}</p>
+                    <p><strong>Disease Indication:</strong> ${project.diseaseIndication}</p>
+                    <p><strong>Product:</strong> ${project.product}</p>
+                    <p><strong>Strength:</strong> ${project.strength}</p>
+                    <p><strong>Dosage Form:</strong> ${project.dosageForm}</p>
+                    <p><strong>Innovator Company:</strong> ${project.innovatorCompany}</p>
+                    <p><strong>Brand:</strong> ${project.innovatorBrand}</p>
+                    <p><strong>Details:</strong> ${project.detailedContents}</p>
+                </div>
+            `;
+            projectModal.style.display = 'flex';
+        }
+    }
+
+    // Export data to CSV
+    function exportToCSV() {
+        const headers = ['№', 'Therapeutic Category', 'Disease Indication', 'Product', 'Strength', 'Dosage Form', 'Innovator Company', 'Innovator Brand', 'Detailed Contents'];
+        const csvRows = [];
+        csvRows.push(headers.join(','));
+        filteredProjects.forEach(project => {
+            const row = [
+                project.id,
+                `"${project.therapeuticCategory}"`,
+                `"${project.diseaseIndication}"`,
+                `"${project.product}"`,
+                `"${project.strength}"`,
+                `"${project.dosageForm}"`,
+                `"${project.innovatorCompany}"`,
+                `"${project.innovatorBrand}"`,
+                `"${project.detailedContents}"`
+            ];
+            csvRows.push(row.join(','));
+        });
+        const csvContent = csvRows.join('\n');
+        const blob = new Blob([csvContent], { type: 'text/csv' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.setAttribute('hidden', '');
+        a.setAttribute('href', url);
+        a.setAttribute('download', 'r&d_projects.csv');
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+
+    // Event Listeners
+    searchInput.addEventListener('input', filterProjects);
+    prevPageBtn.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderTable();
+        }
+    });
+    nextPageBtn.addEventListener('click', () => {
+        const totalPages = Math.ceil(filteredProjects.length / rowsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderTable();
+        }
+    });
+    closeModal.addEventListener('click', () => {
+        projectModal.style.display = 'none';
+    });
+    window.addEventListener('click', (e) => {
+        if (e.target === projectModal) {
+            projectModal.style.display = 'none';
+        }
+    });
+
+    // Initialize
+    renderTable();
+
+    </script>
+</body>
+</html>

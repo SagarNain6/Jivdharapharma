@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jivdhara - Innovative Healthcare Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+      
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                 <span>Jivdhara</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    
+                   
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="R&D.html">R&D</a></li>
+                  
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content animate fade-in">
+            <h1>Our Products</h1>
+            <p>Dedicated to improving global health through groundbreaking research, high-quality medicines, and affordable healthcare solutions.</p>
+           
+        </div>
+    </section>
+    <section id="product-table-section" style="background:#f5f7fa; padding:40px 0;">
+  <div style="max-width:1100px; margin:0 auto; background:#fff; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.07); padding:32px;">
+    <h2 style="text-align:center; color:#2c3e50; margin-bottom:24px;">Product List</h2>
+    <div style="overflow-x:auto;">
+      <table id="productTable" style="width:100%; border-collapse:collapse; min-width:600px;">
+        <thead>
+          <tr style="background:#3498db; color:#fff;">
+            <th style="padding:12px 8px; border-bottom:1px solid #ddd;">№</th>
+            <th style="padding:12px 8px; border-bottom:1px solid #ddd;">Product</th>
+            <th style="padding:12px 8px; border-bottom:1px solid #ddd;">Strength</th>
+            <th style="padding:12px 8px; border-bottom:1px solid #ddd;">Dosage Form</th>
+            <th style="padding:12px 8px; border-bottom:1px solid #ddd;">Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be inserted by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<script>
+// filepath: c:\Users\sagar\OneDrive\Desktop\game\R&D.html
+const productData = [
+  {no: 1, product: "Azithromycin", strength: "250, 500 mg", dosage: "capsules", category: "Antibiotics"},
+  {no: 2, product: "Linezolid", strength: "200 mg, 400 mg, 600 mg", dosage: "film-coated tablets", category: "Antibiotics"},
+  {no: 3, product: "Linezolid", strength: "300 mg", dosage: "film-coated tablets", category: "Antibiotics"},
+  {no: 4, product: "Moxifloxacin", strength: "400 mg", dosage: "film-coated tablets", category: "Antibiotics"},
+  {no: 5, product: "Levofloxacin", strength: "250 mg, 500 mg, 750 mg", dosage: "film-coated tablets", category: "Antibiotics"},
+  {no: 6, product: "Cycloserine", strength: "250 mg", dosage: "capsules", category: "Antibiotics"},
+  {no: 7, product: "Amlodipine", strength: "5 mg, 10 mg", dosage: "tablets", category: "Cardio Vascular"},
+  {no: 8, product: "Clopidogrel", strength: "75 mg", dosage: "film-coated tablets", category: "Cardio Vascular"},
+  {no: 9, product: "Rosuvastatin", strength: "5 mg, 10 mg, 20 mg", dosage: "film-coated tablets", category: "Cardio Vascular"},
+  {no: 10, product: "Loratadine", strength: "5 mg/5 ml", dosage: "oral solution", category: "Anti-allergic"},
+  {no: 11, product: "Loratadine", strength: "10 mg", dosage: "tablets", category: "Anti-allergic"},
+  {no: 12, product: "Ambroxol", strength: "15 mg/5 ml, 30 mg/5 ml", dosage: "oral solution", category: "Anti-cough and cold"},
+  {no: 13, product: "Bromhexine", strength: "4 mg/5 ml, 8 mg/5 ml", dosage: "syrup", category: "Anti-cough and cold"},
+  {no: 14, product: "Paracetamol", strength: "25 mg/ml", dosage: "oral solution", category: "Anti-cough and cold"},
+  {no: 15, product: "Valacyclovir", strength: "500 mg, 1000 mg", dosage: "film-coated tablets", category: "Аntiviral agent"},
+  {no: 16, product: "Rimantadine", strength: "50 mg", dosage: "tablets", category: "Аntiviral agent"},
+  {no: 17, product: "PAS Tab", strength: "1 g", dosage: "tablets, enteric-soluble, film-coated", category: "Anti-tuberculosis"},
+  {no: 18, product: "Terizidone", strength: "150 mg, 250 mg, 300 mg", dosage: "capsules", category: "Anti-tuberculosis"},
+  {no: 19, product: "Lactolex", strength: "667 mg/ml", dosage: "syrup", category: "Laxatives"},
+  {no: 20, product: "Celecoxib", strength: "200 mg", dosage: "capsules", category: "Nonsteroidal anti-inflammatory drugs"},
+  {no: 21, product: "Cinacalcet", strength: "30 mg, 60 mg, 90 mg", dosage: "film-coated tablets", category: "Anti-parathyroid agent"},
+  {no: 22, product: "Tamsulosin", strength: "0.4 mg", dosage: "modified release capsules", category: "Anti-prostatitis"},
+  {no: 23, product: "Ursodeoxycholic acid", strength: "250 mg", dosage: "capsules", category: "Choleretic agents"}
+];
+
+const tbody = document.querySelector('#productTable tbody');
+tbody.innerHTML = productData.map(row => `
+  <tr>
+    <td style="padding:10px 8px; border-bottom:1px solid #eee;">${row.no}</td>
+    <td style="padding:10px 8px; border-bottom:1px solid #eee;">${row.product}</td>
+    <td style="padding:10px 8px; border-bottom:1px solid #eee;">${row.strength}</td>
+    <td style="padding:10px 8px; border-bottom:1px solid #eee;">${row.dosage}</td>
+    <td style="padding:10px 8px; border-bottom:1px solid #eee;">${row.category}</td>
+  </tr>
+`).join('');
+</script>
+
+
+    <!-- R&D Section -->
+    <section class="section" id="rnd" style="background-color: #f5f7fa;">
+        <div class="container">
+            <div class="section-title animate fade-in delay-1">
+                <h2>Research & Development</h2>
+                <p>Our commitment to innovation drives the discovery of novel therapeutics to address unmet medical needs.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image animate slide-in-left delay-2">
+                    <img src="photos/Research.png" alt="Scientists conducting pharmaceutical research in high-tech laboratory setting" />
+                </div>
+                <div class="about-text animate slide-in-right delay-2">
+                    <h3>Innovating for Tomorrow's Health</h3>
+                    <p>At Jivdhara, we invest significantly in R&D to discover and develop innovative medicines. Our research spans multiple areas including oncology, cardiology, anti-allergy, and infectious diseases.</p>
+                    <p>Our global team of scientists and researchers work tirelessly to translate scientific discoveries into medicines that improve patients' lives. We collaborate with academic institutions, biotech companies, and healthcare providers worldwide.</p>
+                  
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title animate fade-in delay-1">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you. Get in touch with our team for any inquiries or partnerships.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info animate slide-in-left delay-2">
+                    <h3>Corporate Headquarters</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <h4>Address</h4>
+                            <p>504, Shiv Angan Complex, Sallaiya, 
+     Bhopal Madhya Pradesh, 
+     India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+918871000001">+91 8871000001</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:drrajandubey@gmail.com">office@jivdhara.in</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-text">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 5:00 PM IST</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content animate fade-in delay-1">
+                <div class="footer-column">
+                    <h3>Jivdhara Pharma</h3>
+                    <p>Innovating for a healthier world. Committed to discovering, developing, and delivering innovative medicines that make a difference.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+
+                        <li><a href="Products.html">Products</a></li>
+                        <li><a href="R&D.html">Research</a></li>
+                       
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+               
+                
+           
+            <div class="copyright animate fade-in delay-2">
+                <p>&copy; 2021 Jivdhara Pharmaceuticals. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                this.innerHTML = navLinks.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+
+            // Smooth Scrolling for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if(navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Header Scroll Effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', function() {
+                if(window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Intersection Observer for Animations
+            const animateElements = document.querySelectorAll('.animate');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add(entry.target.dataset.animation);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animateElements.forEach(element => {
+                const animationType = Array.from(element.classList)
+                    .find(cls => cls.startsWith('slide-in') || cls === 'fade-in');
+                
+                if(animationType) {
+                    element.dataset.animation = animationType;
+                    observer.observe(element);
+                }
+            });
+
+            // Product Card Hover Animation
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Contact Form Submission
+            const contactForm = document.getElementById('contactForm');
+            if(contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will get back to you soon.');
+                    this.reset();
+                });
+            }
+
+            // Scroll to top button
+            const scrollToTopBtn = document.createElement('button');
+            scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            scrollToTopBtn.className = 'scroll-to-top';
+            scrollToTopBtn.style.display = 'none';
+            scrollToTopBtn.style.position = 'fixed';
+            scrollToTopBtn.style.bottom = '30px';
+            scrollToTopBtn.style.right = '30px';
+            scrollToTopBtn.style.width = '50px';
+            scrollToTopBtn.style.height = '50px';
+            scrollToTopBtn.style.borderRadius = '50%';
+            scrollToTopBtn.style.backgroundColor = 'var(--primary)';
+            scrollToTopBtn.style.color = 'white';
+            scrollToTopBtn.style.border = 'none';
+            scrollToTopBtn.style.cursor = 'pointer';
+            scrollToTopBtn.style.transition = 'all 0.3s ease';
+            scrollToTopBtn.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            scrollToTopBtn.style.fontSize = '1.2rem';
+            scrollToTopBtn.style.zIndex = '999';
+            
+            scrollToTopBtn.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'var(--secondary)';
+                this.style.transform = 'scale(1.1)';
+            });
+            
+            scrollToTopBtn.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'var(--primary)';
+                this.style.transform = 'scale(1)';
+            });
+            
+            scrollToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            document.body.appendChild(scrollToTopBtn);
+            
+            window.addEventListener('scroll', function() {
+                if(window.scrollY > 300) {
+                    scrollToTopBtn.style.display = 'flex';
+                    scrollToTopBtn.style.justifyContent = 'center';
+                    scrollToTopBtn.style.alignItems = 'center';
+                } else {
+                    scrollToTopBtn.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
