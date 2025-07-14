@@ -160,117 +160,363 @@
             </div>
         </div>
     </section>
+
+
+
            <section class="about-section" id="teamss">
+  <section class="about-section">
+  <style>
+    .about-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .about-title {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 32px;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      justify-items: center;
+    }
+    .team-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+      padding: 18px 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      min-width: 0;
+      max-width: 220px;
+      width: 100%;
+      position: relative;
+    }
+    .team-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(44,62,80,0.13);
+    }
+    .team-img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      
+      margin-bottom: 10px;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+    }
+    .team-name {
+      font-size: 1.15rem;
+      color: #2c3e50;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    .team-role {
+      font-size: 1rem;
+      color: #3498db;
+      margin-bottom: 8px;
+    }
+    .team-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 18px;
+      background: #3498db;
+      color: #fff;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+      cursor: pointer;
+      border: none;
+    }
+    .team-btn:hover {
+      background: #217dbb;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @media (max-width: 900px) {
+      .team-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    }
+    @media (max-width: 600px) {
+      .team-grid { grid-template-columns: 1fr; gap: 16px; }
+      .about-title { font-size: 1.4rem; }
+      .team-card { padding: 12px 2px; }
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 95vw;
+      padding: 24px 18px;
+      box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+      text-align: left;
+      position: relative;
+      animation: fadeIn 0.5s;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+    .modal-close {
+      position: absolute;
+      top: 12px; right: 16px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #3498db;
+      cursor: pointer;
+    }
+    .modal-img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      
+      margin-bottom: 10px;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+    }
+    .modal-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 4px;
+    }
+    .modal-role {
+      font-size: 1rem;
+      color: #3498db;
+      margin-bottom: 10px;
+    }
+    .modal-bio {
+      font-size: 0.97rem;
+      color: #555;
+      white-space: pre-line;
+    }
+  </style>
   <h2 class="about-title">Our Team</h2>
   <div class="team-grid">
-    <div class="team-card">
+    <div class="team-card" data-member="sameer">
       <img src="sameer.jpg" alt="Sameer Shrivastava" class="team-img">
       <div class="team-name">Sameer Shrivastava</div>
       <div class="team-role">Founder & Director</div>
+      <button class="team-btn">Learn More</button>
     </div>
-    <div class="team-card">
+    <div class="team-card" data-member="binu">
       <img src="binu.jpg" alt="Dr Binu Gopalakrishna Panicker" class="team-img">
       <div class="team-name">Dr Binu Gopalakrishna Panicker</div>
       <div class="team-role">CEO</div>
+      <button class="team-btn">Learn More</button>
     </div>
-    <div class="team-card">
+    <div class="team-card" data-member="rajan">
       <img src="rajan.jpg" alt="Dr Rajan Dubey" class="team-img">
       <div class="team-name">Dr Rajan Dubey</div>
       <div class="team-role">CEO, Indian Operations</div>
+      <button class="team-btn">Learn More</button>
     </div>
-    <div class="team-card">
+    <div class="team-card" data-member="mikhail">
       <img src="mikhail.jpg" alt="Yushkevich Mikhail" class="team-img">
       <div class="team-name">Yushkevich Mikhail</div>
       <div class="team-role">Production Head</div>
+      <button class="team-btn">Learn More</button>
     </div>
-    <div class="team-card">
+    <div class="team-card" data-member="pavel">
       <img src="pavel.jpg" alt="Pavel Smirnov" class="team-img">
       <div class="team-name">Pavel Smirnov</div>
       <div class="team-role">Head of Marketing</div>
+      <button class="team-btn">Learn More</button>
     </div>
-    <div class="team-card">
+    <div class="team-card" data-member="irina">
       <img src="irina.jpg" alt="Irina Vershina" class="team-img">
       <div class="team-name">Irina Vershina</div>
       <div class="team-role">Head of Regulatory Department</div>
+      <button class="team-btn">Learn More</button>
     </div>
   </div>
+  <!-- Modal -->
+  <div class="modal" id="teamModal">
+    <div class="modal-content" id="modalContent">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <!-- Content will be injected by JS -->
+    </div>
+  </div>
+  <script>
+    // Team member details (full content)
+    const teamDetails = {
+      sameer: {
+        img: "sameer.jpg",
+        name: "Sameer Shrivastava",
+        role: "Founder & Director, Scan Biotech Group of companies",
+        bio: `Date of Birth: 05-11-1971
+Place of birth: Bhopal, India
+Email: sameer@scanbiotech.ru / Sameer@jivdhara.com
+Mobile: +79152571728
+Master of Technology (M.Tech) in Aeronautical Engineering from Kiev’s Institute of Civil Aviation Engineers, Ukraine (1991-1996).
+Experience: 25 years of experience in pharma marketing. 10 years of experience in pharma manufacturing.
+Work role: Business development.`
+      },
+      binu: {
+        img: "binu.jpg",
+        name: "Dr Binu Gopalakrishna Panicker",
+        role: "CEO",
+        bio: `Male, 46 years, born on 23 November 1978
++7 (985) 1300221 — preferred means of communication
+binu@scanbiotech.ru
+Reside in: Moscow
+Citizenship: India, work permit at: Russia
+
+Committed Pharma professional credited with varied success in all aspects of pharmaceutical business including forming Collaborations, Corporate Strategy, product strategy, regulatory strategy, product launches, Business Development, Sales & Marketing, Operational excellence, Commercial and supply chain process, P&L management, effective cross-functional team, leadership, Successfully led various commercial operation roles with leadership position in each segment of business, creating high performing teams to drive business with a competitive advantage. Excellence in blending strategy with excellence in execution, functioning as Team developer with focus on results, Creator of Strategy and execution to surpass organization objective. Developed proficiency towards good analytical skills, framing policies based on Market dynamics.
+
+Work experience —21 years
+June 2016 — till now
+9 years
+Scan Biotech Group of companies
+Director, Sales & Marketing (from June 2016 till April 2020)
+CEO
+NPK SCANBIOTECH (from April 2020 till date)
+Moscow, www.scanbiotech.ru
+Managing overall administration, production, sales, marketing of drugs manufactured by NPK Scan Biotech in Russia. Procurement of APIs from India. Coordination with all the raw material suppliers from India, China.
+
+Education
+Master
+2003 Kuban State Medical University (KSMU)
+Bachelor of Medicine, Bachelor of Surgery (MBBS), MS ORTHO Orthopedic Surgery
+
+Skills
+English, Russian, Hindi, Malayalam, Tamil
+Team management, Strategic thinking, Business communication, Business process optimization, Budgeting, Strategic planning, Sales development, Cost management, Operational planning, Performance management, Customer relationship management, Planning, Budgeting, Team building, Time management, Contract conclusion, Telephone negotiations, Leadership, Analytical thinking, Interaction with government regulatory authorities, Business process management, Organizational development, Crisis management`
+      },
+      rajan: {
+        img: "rajan.jpg",
+        name: "Dr Rajan Dubey",
+        role: "CEO, Indian operations",
+        bio: `Resides: Bhopal, India
+Email: drrajandubey@gmail.com | Phone: +91-8871000001 | Skype: dubeyrajan
+
+PROFILE SUMMARY
+Dynamic and results-driven healthcare strategist and international business leader with over 15 years of diverse experience in biotechnology, pharmaceuticals, and public health. Proven expertise in handling complex operations, strategic business development, and global market expansion across CIS, SEA, Africa, and Latin America. Adept at leading multi-million-dollar projects, managing cross-functional teams, and driving growth through innovative solutions in evidence-based medicine and precision healthcare.
+
+EDUCATION
+Drug Development Product Management Specialization | UCSD (2021)
+Master of Public Health (MPH) | Indian Institute of Public Health, Bangalore
+MBA (Healthcare Management)
+MD (Preventive and Social Medicine)
+MBBS | (1999)
+
+KEY ACHIEVEMENTS
+- Pioneered host-directed therapies for Tuberculosis in collaboration with Dr. P.J. Cardona.
+- Co-developed the world’s first AI-enabled stethoscope, Stethee, achieving FDA approval.
+- Led clinical trials for innovative drug repurposing in chronic prostatitis.
+- Secured and managed large-scale donor programs with organizations like BMGF, GAVI, DFID, and the Government of Norway.
+- Directed successful international business expansions, product launches, and market penetration strategies.
+
+TECHNICAL EXPERTISE
+Business Development & Strategic Planning
+Public Health Program Implementation
+Pharmaceutical Supply Chain & Procurement
+Regulatory Affairs & Quality Assurance
+Market Research & Product Launch Strategies
+Evidence-Based Medicine & Precision Healthcare
+
+GLOBAL EXPOSURE
+Extensive work experience across CIS, SEA, Africa, and Latin America.
+Participation in international forums: CPHI, Vita-foods, Hi, MEDTECH Summit, BIO-2022 USA.`
+      },
+      mikhail: {
+        img: "mikhail.jpg",
+        name: "Yushkevich Mikhail",
+        role: "Production Head, NPK Scan Biotech Ltd., Russia; Consultant, Jivdhara Pharma Pvt. Ltd., India",
+        bio: `Yushkevich Mikhail is a highly qualified specialist in the field of pharmaceutical production, has a higher professional education with the qualification of engineer-technologist of pharmaceutical production.
+Has more than 14 years of experience in Russia and the CIS countries in the positions of chief technologist and production director.
+Has experience in both the development and reconstruction of the enterprise, and the launch of production from the beginning. Many years of successful experience in personnel management. Many years of successful experience in project management in the field of pharmaceutical production determines high professionalism.`
+      },
+      pavel: {
+        img: "pavel.jpg",
+        name: "Pavel Smirnov",
+        role: "Head of Marketing, Jivdhara Pharma Pvt. Ltd.",
+        bio: `Resides: Moscow
+
+Pavel Smirnov is an experienced marketing specialist in the pharmaceutical industry with over 13 years of experience and a unique combination of medical education and deep expertise in brand management. Holding two higher medical degrees (General Medicine and Pharmacy) and accreditation as an endocrinologist, he successfully combines clinical knowledge with advanced marketing technologies. His portfolio includes work with leading international pharmaceutical companies, including Astellas Pharma, Viseven, and Pharmstandart.
+
+Pavel demonstrates outstanding results in new product launches, omnichannel promotion, and strategic planning — from creating portfolios from scratch to attracting investments worth 1 billion rubles. His international experience spans projects across Europe, CIS countries, and the Middle East. He specializes in digital marketing, medical content development, and cross-functional project management, ensuring high profitability and timely execution of all initiatives.`
+      },
+      irina: {
+        img: "irina.jpg",
+        name: "Irina Vershina",
+        role: "Head of Regulatory Department, NPK Scan Biotech",
+        bio: `Email: v.irina@scanbiotech.ru
+Resides: Moscow
+Citizenship: Russian
+Work experience - 11 years and 6 months
+
+Head of the Department of Registration of Medicines
+Participation in the development of strategies and plans for regulatory work; preparation of budgets; ensuring the implementation of a full cycle of registration, modification, and re-registration of medicines from the stage of dossier formation to obtaining a registration certificate for registration; there is experience in filing according to the national procedure and according to the rules of the EAEU; analysis and preparation of a registration dossier for a foreign medicinal product for registration according to the rules of the EAEU; registration of letters to the Ministry of Health of the Russian Federation and other regulatory authorities; registration, modification and re-registration of marginal selling prices for VED; interaction with employees within the company (marketing, supply chain, quality, etc.), with colleagues from production sites, with regulatory authorities; interaction with translation agencies, consulting companies, contractors, conclusion of contracts.
+
+Education
+Higher
+Education 2013 Zaporozhye State Medical University, Zaporozhye
+Pharmacy, Pharmacist
+2020 – professional retraining Pharmaceutical technology, Pharmacist Technologist
+2025 – Professional retraining Pharmacy Management and Economics, Pharmacist-organizer
+
+Skills
+Language proficiency Russian is a native language
+English — B1 — Medium
+Ukrainian — C2 — Perfect
+Skills Organizational skills Working with a large amount of information Teamwork Good speech Responsibility Communication skills
+
+About me Purposeful, always focused on results, responsible, attentive, and quick to learn. Can work with large amounts of information. Able to quickly analyze the situation and make quick decisions. Great desire to work and expand skills in the field of registration.`
+      }
+    };
+
+    // Fade-in animation stagger
+    document.querySelectorAll('.team-card').forEach((card, i) => {
+      card.style.animationDelay = (i * 0.15) + "s";
+    });
+
+    // Modal logic
+    const modal = document.getElementById('teamModal');
+    const modalContent = document.getElementById('modalContent');
+
+    document.querySelectorAll('.team-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const card = e.target.closest('.team-card');
+        const member = card.getAttribute('data-member');
+        const detail = teamDetails[member];
+        modalContent.innerHTML = `
+          <button class="modal-close" id="modalClose">&times;</button>
+          <img src="${detail.img}" alt="${detail.name}" class="modal-img">
+          <div class="modal-name">${detail.name}</div>
+          <div class="modal-role">${detail.role}</div>
+          <div class="modal-bio">${detail.bio}</div>
+        `;
+        modal.style.display = "flex";
+        // Re-attach close event
+        document.getElementById('modalClose').onclick = () => { modal.style.display = "none"; };
+      });
+    });
+
+    // Close modal on background click
+    modal.onclick = function(e) {
+      if (e.target === modal) modal.style.display = "none";
+    };
+  </script>
 </section>
-<style>
-.about-section {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
-.about-title {
-  text-align: center;
-  color: #2c3e50;
-  margin-bottom: 32px;
-  font-size: 2.2rem;
-  letter-spacing: 1px;
-}
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 32px;
-  justify-items: center; /* Center cards horizontally */
-}
-.team-card {
-  background: #fff;
-
-  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
-  padding: 12px 6px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  min-width: 0;
-  max-width: 180px; /* Make cards narrower */
-  width: 100%;
-}
-.team-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 24px rgba(44,62,80,0.13);
-}
-.team-img {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-
-  margin-bottom: 10px;
-  box-shadow: 0 1px 4px rgba(44,62,80,0.10);
-}
-.team-name {
-  font-size: 1.15rem;
-  color: #2c3e50;
-  margin-bottom: 4px;
-  font-weight: bold;
-}
-.team-role {
-  font-size: 1rem;
-  color: #3498db;
-  margin-bottom: 8px;
-}
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-@media (max-width: 900px) {
-  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-}
-@media (max-width: 600px) {
-  .team-grid { grid-template-columns: 1fr; gap: 16px; }
-  .about-title { font-size: 1.4rem; }
-  .team-card { padding: 16px 4px; }
-}
-</style>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll('.team-card').forEach((card, i) => {
-    card.style.animationDelay = (i * 0.15) + "s";
-  });
-});
-</script>
-
 
   
 
