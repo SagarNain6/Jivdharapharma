@@ -40,66 +40,327 @@
            
         </div>
     </section>
-    <section id="product-table-section" style="background:#f5f7fa; padding:40px 0;">
-  <div style="max-width:1100px; margin:0 auto; background:#fff; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.07); padding:32px;">
-    <h2 style="text-align:center; color:#2c3e50; margin-bottom:24px;">Product List</h2>
-    <div style="overflow-x:auto;">
-      <table id="productTable" style="width:100%; border-collapse:collapse; min-width:600px;">
-        <thead>
-          <tr style="background:#3498db; color:#fff;">
-            <th style="padding:12px 8px; border-bottom:1px solid #ddd;">№</th>
-            <th style="padding:12px 8px; border-bottom:1px solid #ddd;">Product</th>
-            <th style="padding:12px 8px; border-bottom:1px solid #ddd;">Strength</th>
-            <th style="padding:12px 8px; border-bottom:1px solid #ddd;">Dosage Form</th>
-            <th style="padding:12px 8px; border-bottom:1px solid #ddd;">Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Table rows will be inserted by JS -->
-        </tbody>
-      </table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section id="product-tables">
+  <div class="product-container">
+    <h2 class="product-title">Product Portfolio</h2>
+    
+    <!-- Antibiotics -->
+    <div class="table-block">
+      <h3 class="table-title">Antibiotics</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Azithromycin</td><td>250, 500 mg</td><td>capsules</td></tr>
+            <tr><td>2</td><td>Linezolid</td><td>200 mg, 400 mg, 600 mg</td><td>film-coated tablets</td></tr>
+            <tr><td>3</td><td>Linezolid</td><td>300 mg</td><td>film-coated tablets</td></tr>
+            <tr><td>4</td><td>Moxifloxacin</td><td>400 mg</td><td>film-coated tablets</td></tr>
+            <tr><td>5</td><td>Levofloxacin</td><td>250 mg, 500 mg, 750 mg</td><td>film-coated tablets</td></tr>
+            <tr><td>6</td><td>Cycloserine</td><td>250 mg</td><td>capsules</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Cardio Vascular -->
+    <div class="table-block">
+      <h3 class="table-title">Cardio Vascular</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>7</td><td>Amlodipine</td><td>5 mg, 10 mg</td><td>tablets</td></tr>
+            <tr><td>8</td><td>Clopidogrel</td><td>75 mg</td><td>film-coated tablets</td></tr>
+            <tr><td>9</td><td>Rosuvastatin</td><td>5 mg, 10 mg, 20 mg</td><td>film-coated tablets</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Anti-allergic -->
+    <div class="table-block">
+      <h3 class="table-title">Anti-allergic</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>10</td><td>Loratadine</td><td>5 mg/5 ml</td><td>oral solution</td></tr>
+            <tr><td>11</td><td>Loratadine</td><td>10 mg</td><td>tablets</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Anti-cough and cold -->
+    <div class="table-block">
+      <h3 class="table-title">Anti-cough and cold</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>12</td><td>Ambroxol</td><td>15 mg/5 ml, 30 mg/5 ml</td><td>oral solution</td></tr>
+            <tr><td>13</td><td>Bromhexine</td><td>4 mg/5 ml, 8 mg/5 ml</td><td>syrup</td></tr>
+            <tr><td>14</td><td>Paracetamol</td><td>25 mg/ml</td><td>oral solution</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Antiviral agent -->
+    <div class="table-block">
+      <h3 class="table-title">Antiviral Agent</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>15</td><td>Valacyclovir</td><td>500 mg, 1000 mg</td><td>film-coated tablets</td></tr>
+            <tr><td>16</td><td>Rimantadine</td><td>50 mg</td><td>tablets</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Anti-tuberculosis -->
+    <div class="table-block">
+      <h3 class="table-title">Anti-tuberculosis</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>17</td><td>PAS Tab</td><td>1 g</td><td>tablets, enteric-soluble, film-coated</td></tr>
+            <tr><td>18</td><td>Terizidone</td><td>150 mg, 250 mg, 300 mg</td><td>capsules</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Laxatives -->
+    <div class="table-block">
+      <h3 class="table-title">Laxatives</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>19</td><td>Lactolex</td><td>667 mg/ml</td><td>syrup</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Nonsteroidal anti-inflammatory drugs -->
+    <div class="table-block">
+      <h3 class="table-title">Nonsteroidal Anti-inflammatory Drugs</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>20</td><td>Celecoxib</td><td>200 mg</td><td>capsules</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Anti-parathyroid agent -->
+    <div class="table-block">
+      <h3 class="table-title">Anti-parathyroid Agent</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>21</td><td>Cinacalcet</td><td>30 mg, 60 mg, 90 mg</td><td>film-coated tablets</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Anti-prostatitis -->
+    <div class="table-block">
+      <h3 class="table-title">Anti-prostatitis</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>22</td><td>Tamsulosin</td><td>0.4 mg</td><td>modified release capsules</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Choleretic agents -->
+    <div class="table-block">
+      <h3 class="table-title">Choleretic Agents</h3>
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>№</th>
+              <th>Product</th>
+              <th>Strength</th>
+              <th>Dosage Form</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>23</td><td>Ursodeoxycholic acid</td><td>250 mg</td><td>capsules</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
-<script>
-// filepath: c:\Users\sagar\OneDrive\Desktop\game\R&D.html
-const productData = [
-  {no: 1, product: "Azithromycin", strength: "250, 500 mg", dosage: "capsules", category: "Antibiotics"},
-  {no: 2, product: "Linezolid", strength: "200 mg, 400 mg, 600 mg", dosage: "film-coated tablets", category: "Antibiotics"},
-  {no: 3, product: "Linezolid", strength: "300 mg", dosage: "film-coated tablets", category: "Antibiotics"},
-  {no: 4, product: "Moxifloxacin", strength: "400 mg", dosage: "film-coated tablets", category: "Antibiotics"},
-  {no: 5, product: "Levofloxacin", strength: "250 mg, 500 mg, 750 mg", dosage: "film-coated tablets", category: "Antibiotics"},
-  {no: 6, product: "Cycloserine", strength: "250 mg", dosage: "capsules", category: "Antibiotics"},
-  {no: 7, product: "Amlodipine", strength: "5 mg, 10 mg", dosage: "tablets", category: "Cardio Vascular"},
-  {no: 8, product: "Clopidogrel", strength: "75 mg", dosage: "film-coated tablets", category: "Cardio Vascular"},
-  {no: 9, product: "Rosuvastatin", strength: "5 mg, 10 mg, 20 mg", dosage: "film-coated tablets", category: "Cardio Vascular"},
-  {no: 10, product: "Loratadine", strength: "5 mg/5 ml", dosage: "oral solution", category: "Anti-allergic"},
-  {no: 11, product: "Loratadine", strength: "10 mg", dosage: "tablets", category: "Anti-allergic"},
-  {no: 12, product: "Ambroxol", strength: "15 mg/5 ml, 30 mg/5 ml", dosage: "oral solution", category: "Anti-cough and cold"},
-  {no: 13, product: "Bromhexine", strength: "4 mg/5 ml, 8 mg/5 ml", dosage: "syrup", category: "Anti-cough and cold"},
-  {no: 14, product: "Paracetamol", strength: "25 mg/ml", dosage: "oral solution", category: "Anti-cough and cold"},
-  {no: 15, product: "Valacyclovir", strength: "500 mg, 1000 mg", dosage: "film-coated tablets", category: "Аntiviral agent"},
-  {no: 16, product: "Rimantadine", strength: "50 mg", dosage: "tablets", category: "Аntiviral agent"},
-  {no: 17, product: "PAS Tab", strength: "1 g", dosage: "tablets, enteric-soluble, film-coated", category: "Anti-tuberculosis"},
-  {no: 18, product: "Terizidone", strength: "150 mg, 250 mg, 300 mg", dosage: "capsules", category: "Anti-tuberculosis"},
-  {no: 19, product: "Lactolex", strength: "667 mg/ml", dosage: "syrup", category: "Laxatives"},
-  {no: 20, product: "Celecoxib", strength: "200 mg", dosage: "capsules", category: "Nonsteroidal anti-inflammatory drugs"},
-  {no: 21, product: "Cinacalcet", strength: "30 mg, 60 mg, 90 mg", dosage: "film-coated tablets", category: "Anti-parathyroid agent"},
-  {no: 22, product: "Tamsulosin", strength: "0.4 mg", dosage: "modified release capsules", category: "Anti-prostatitis"},
-  {no: 23, product: "Ursodeoxycholic acid", strength: "250 mg", dosage: "capsules", category: "Choleretic agents"}
-];
+<style>
+.product-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(44,62,80,0.09);
+}
+.product-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 36px;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-top: 32px;
+}
+.table-block { margin-bottom: 36px; }
+.table-title {
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  padding-left: 4px;
+  letter-spacing: 0.5px;
+  color: #3498db;
+}
+.table-wrapper {
+  border-radius: 8px;
+  overflow-x: auto;
+  background: #f8fafc;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+  padding: 8px 0;
+}
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 380px;
+}
+.product-table th, .product-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  white-space: nowrap;
+}
+.product-table th {
+  background: #3498db;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+}
+.product-table tr:last-child td { border-bottom: none; }
 
-const tbody = document.querySelector('#productTable tbody');
-tbody.innerHTML = productData.map(row => `
-  <tr>
-    <td style="padding:10px 8px; border-bottom:1px solid #eee;">${row.no}</td>
-    <td style="padding:10px 8px; border-bottom:1px solid #eee;">${row.product}</td>
-    <td style="padding:10px 8px; border-bottom:1px solid #eee;">${row.strength}</td>
-    <td style="padding:10px 8px; border-bottom:1px solid #eee;">${row.dosage}</td>
-    <td style="padding:10px 8px; border-bottom:1px solid #eee;">${row.category}</td>
-  </tr>
-`).join('');
-</script>
+@media (max-width: 900px) {
+  .product-title { font-size: 1.6rem; }
+  .product-table th, .product-table td { padding: 10px 6px; font-size: 0.97rem; }
+}
+@media (max-width: 700px) {
+  .product-container { padding: 0 2px; }
+  .table-title { font-size: 1.05rem; }
+  .product-table { font-size: 0.93rem; min-width: 340px; }
+  .product-table th, .product-table td { padding: 8px 4px; }
+}
+@media (max-width: 500px) {
+  .product-title { font-size: 1.1rem; }
+  .table-title { font-size: 0.95rem; }
+  .product-table { font-size: 0.85rem; min-width: 260px; }
+  .product-table th, .product-table td { padding: 6px 2px; }
+}
+</style>
+</body>
+</html>
 
 
     <!-- R&D Section -->
