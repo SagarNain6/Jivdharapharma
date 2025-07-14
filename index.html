@@ -160,6 +160,117 @@
             </div>
         </div>
     </section>
+           <section class="about-section" id="teamss">
+  <h2 class="about-title">Our Team</h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <img src="photos/sameer.jpg" alt="Sameer Shrivastava" class="team-img">
+      <div class="team-name">Sameer Shrivastava</div>
+      <div class="team-role">Founder & Director</div>
+    </div>
+    <div class="team-card">
+      <img src="photos/binu.jpg" alt="Dr Binu Gopalakrishna Panicker" class="team-img">
+      <div class="team-name">Dr Binu Gopalakrishna Panicker</div>
+      <div class="team-role">CEO</div>
+    </div>
+    <div class="team-card">
+      <img src="photos/rajan.jpg" alt="Dr Rajan Dubey" class="team-img">
+      <div class="team-name">Dr Rajan Dubey</div>
+      <div class="team-role">CEO, Indian Operations</div>
+    </div>
+    <div class="team-card">
+      <img src="photos/mikhail.jpg" alt="Yushkevich Mikhail" class="team-img">
+      <div class="team-name">Yushkevich Mikhail</div>
+      <div class="team-role">Production Head</div>
+    </div>
+    <div class="team-card">
+      <img src="photos/pavel.jpg" alt="Pavel Smirnov" class="team-img">
+      <div class="team-name">Pavel Smirnov</div>
+      <div class="team-role">Head of Marketing</div>
+    </div>
+    <div class="team-card">
+      <img src="photos/irina.jpg" alt="Irina Vershina" class="team-img">
+      <div class="team-name">Irina Vershina</div>
+      <div class="team-role">Head of Regulatory Department</div>
+    </div>
+  </div>
+</section>
+<style>
+.about-section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.about-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 32px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
+  justify-items: center; /* Center cards horizontally */
+}
+.team-card {
+  background: #fff;
+
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  padding: 12px 6px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  min-width: 0;
+  max-width: 180px; /* Make cards narrower */
+  width: 100%;
+}
+.team-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(44,62,80,0.13);
+}
+.team-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+}
+.team-name {
+  font-size: 1.15rem;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.team-role {
+  font-size: 1rem;
+  color: #3498db;
+  margin-bottom: 8px;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@media (max-width: 900px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+@media (max-width: 600px) {
+  .team-grid { grid-template-columns: 1fr; gap: 16px; }
+  .about-title { font-size: 1.4rem; }
+  .team-card { padding: 16px 4px; }
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.team-card').forEach((card, i) => {
+    card.style.animationDelay = (i * 0.15) + "s";
+  });
+});
+</script>
+
 
   
 
